@@ -1,26 +1,17 @@
 class Item
-
-    def initialize
-      @price = 30
+# устанавливаем начальные значения для каждого из свойств
+    def initialize(options)
+      @price = options[:price]
+      @weight = options[:weight]
     end
 
-  # Геттеры:
-    def price
-      @price
-    end
-
-# Сеттеры:
-    def price=(price_value)
-      @price = price_value
-    end
+    attr_reader :price, :weight
+    attr_writer :price
 
 end
 
-item1 = Item.new
-puts item1.price
+item1 = Item.new({ :price => 30, :weight => 10})
 
-# вызываем метод price= и задаем значение
-item1.price=(10)
-puts item1.price
-item1.price=(20)
-puts item1.price
+puts "Price is #{item1.price}"
+
+puts "Weight is #{item1.weight}"
