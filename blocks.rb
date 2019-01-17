@@ -1,3 +1,3 @@
-names = ["Bob", "James", "John"]
+names = { :name => "James", :first => "Robert", :last => "Bond" }
 
-names.each { |name| puts name }
+names.each_key {|key| puts names[key] }
