@@ -1,3 +1,1 @@
-names = { :name => "James", :first => "Robert", :last => "Bond" }
-
-names.each_key {|key| puts names[key] }
+File.open("/tmp/blocks.txt", "w") { |f| f.puts "Hello" }
